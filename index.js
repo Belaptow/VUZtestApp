@@ -66,7 +66,7 @@ app.post('/feedback', urlencodedParser, (req, res) => {
     res.render("feedback_tmp", {tmpName:req.body.name});
 })
 
-app.listen(3333, (err) => {
+app.listen(process.env.PORT || 3333, (err) => {
     if (err) {
         return console.log("Error", err)
     }
