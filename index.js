@@ -2,7 +2,8 @@ const path = require('path');
 const express = require('express');
 const fs = require('fs');
 const dateFormat = require('dateformat');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+require('heroku-self-ping').default("https://termfivewebdev.herokuapp.com/");
 
 const app = express();
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
